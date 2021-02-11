@@ -1,0 +1,24 @@
+﻿@model CvEntityCoreMvc.Models.Sinflar.Yetenekler
+
+@{
+    ViewBag.Title = "YetenekEkle";
+    Layout = "~/Views/Shared/_LayoutNavBar.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Yeni Yetenek</label>
+        @Html.TextBoxFor(x => x.Aciklama, new {@class="form-control"})
+    </div>
+    <br />
+    <div>
+        <label>Yetenek Değeri</label>
+        @Html.TextBoxFor(x=>x.Deger, new { @class="form-control"})
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-primary">Kaydet</button>
+    </div>
+    
+</form>
+

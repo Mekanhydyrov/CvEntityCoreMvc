@@ -1,0 +1,26 @@
+﻿@using CvEntityCoreMvc.Models.Sinflar
+@model List<Yetenekler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutNavBar.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>id</th>
+        <th>YETENEK</th>
+        <th>DEĞER</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+    @foreach (var p in Model)
+    {
+        <tr>
+            <td>@p.id</td>
+            <td>@p.Aciklama</td>
+            <td>@p.Deger</td>
+            <td><a href="/Admin/YetenekSil/@p.id" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/YetenekGetir/@p.id" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
